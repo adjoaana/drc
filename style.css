@@ -1,0 +1,141 @@
+:root{
+    /* Color Theme Swatches in Hex */
+--lightGrey: #677169; 
+--sand: #EFCC6F; 
+--lightSand: #EFDE98; 
+--veryLightGreen: #F3F4F2; 
+--grey: #3D3F3E; 
+
+/* font styles  */
+ --font-reg:    font-family: 'Lora', serif;
+ --font-bold: font-family: 'Oswald', sans-serif;
+
+}
+
+
+html{
+    box-sizing: border-box;
+}
+*,*::after,*::before{
+    box-sizing: inherit ;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background-color: var(--veryLightGreen);
+    font-family: var(--font-bold);
+    
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    
+}
+a{
+    color: var(--grey);
+    text-decoration: none;
+}
+a:hover{
+    color: var(--sand);
+}
+
+
+/* nav styles */
+.header{
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+.header__logo{
+    width: 100px;
+    padding: .5rem;
+}
+.header__toggle{
+    padding: 1rem;
+    height: 50px;
+
+}
+
+@media (max-width: 1023px) {
+    /* hamburger menu styles */
+   
+    .open
+   span:first-child{
+    transform: rotate(45deg);
+   }
+   .open span:nth-child(2){
+    opacity: 0;
+   }
+   .open span:last-child{
+    transform: rotate(-45deg);
+   }
+   .header__toggle{
+    padding: 2rem;
+   }
+   .header__toggle
+    span{
+        display: block;
+        width: 25px;
+        height:  3px;
+        margin-bottom: 3px;
+        background-color: var(--grey);
+        transform-origin: 3px 1px;
+    }
+    .header__toggle span:not(:last-child){
+        margin-bottom: 4px;
+    }
+    .overlay {
+        position: relative;
+        opacity: .8;
+        background-color: black;
+
+    }
+    .overlay span{
+        background-color: var(--veryLightGreen);
+    }
+
+    .header__menu ul{
+        color: white;
+        padding-bottom: 1rem;
+        list-style-type: none;
+        text-decoration: none;
+        
+    }
+    .header__menu li{
+        margin-bottom: 1rem;
+    }
+    .header__menu a{
+        color:white
+    }
+    .header__menu a:hover{
+        color:var(--sand);
+        text-decoration: none;
+    }
+    .hide-for-mobile{
+        display: none;
+    }
+
+  
+}
+@media (min-width:1024px) {
+    .header__links{
+        padding: 2rem;
+        
+    }
+     .header__links ul{
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        flex-direction: row wrap;
+        align-items: center;
+        gap: 2rem;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .hide-for-desktop{
+        display: none;
+    }
+    
+}
+
